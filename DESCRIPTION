@@ -9,8 +9,3 @@ Depends: R (>= 2.14.0), lattice (>= 0.18-8), misc3d (>= 0.8-1),
 Imports: methods
 Suggests: tkrplot (>= 0.0-23)
 License: GPL
-NeedsCompilation: yes
-LazyData: true
-Packaged: 2020-04-03 15:48:17 UTC; jingru
-Repository: CRAN
-Date/Publication: 2020-04-04 05:30:02 UTC
