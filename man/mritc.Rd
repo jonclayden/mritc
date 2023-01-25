@@ -196,7 +196,7 @@
   Dai Feng and Luke Tierney (2011)
   mritc: A package for MRI tissue classification
   \emph{Journal of Statistical Software}, \bold{vol.44, no.7} 1-20
-  \url{http://www.jstatsoft.org/v44/i07/}
+  \url{https://www.jstatsoft.org/v44/i07/}
 
   Dai Feng (2008)
   Bayesian hidden Markov normal mixture models with application to MRI
