@@ -1,11 +1,14 @@
 Package: mritc
 Title: MRI Tissue Classification
-Version: 0.5-2
-Author: Dai Feng and Luke Tierney
+Date: 2023-01-25
+Version: 0.5-3
+Author: Dai Feng, Luke Tierney and Jon Clayden
 Description: Various methods for MRI tissue classification.
-Maintainer: Dai Feng <daifeng.stat@gmail.com>
+Maintainer: Jon Clayden <code@clayden.org>
 Depends: R (>= 2.14.0), lattice (>= 0.18-8), misc3d (>= 0.8-1),
-        oro.nifti(>= 0.4.0)
+        oro.nifti (>= 0.4.0)
 Imports: methods
 Suggests: tkrplot (>= 0.0-23)
 License: GPL
+URL: https://github.com/jonclayden/mritc
+BugReports: https://github.com/jonclayden/mritc/issues
