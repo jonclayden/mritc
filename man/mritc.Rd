@@ -222,7 +222,7 @@
   sigma <- initial$sigma
   tc.em <- mritc.em(y, prop, mu, sigma, verbose=TRUE)
  
-  \dontrun{
+  \donttest{
   mrispatial <- makeMRIspatial(mask, nnei=6, sub=FALSE)
   tc.icm <- mritc.icm(y, mrispatial$neighbors, mrispatial$blocks,
                       mu=mu, sigma=sigma, verbose=TRUE)
