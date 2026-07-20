@@ -13,11 +13,10 @@ mritc <- function(intarr, mask, method=c("EM", "ICM", "HMRFEM", "MCMC",
     method <- match.arg(method)
     
     y <- intarr[mask == 1]
-    if(method == "MCMCsub") sub <- TRUE
-    else sub <- FALSE
+    sub <- (method %in% c("MCMCsub", "MCMCsubbias"))
     mrispatial <- makeMRIspatial(mask, nnei=6, sub)
     if(method=="MCMCsubbias"){
-        mrispatial26 <- makeMRIspatial(mask, nnei=26, sub=FALSE, bias=TRUE)
+        mrispatial26 <- makeMRIspatial(mask, nnei=26, sub=TRUE, bias=TRUE)
     }
     init <- initOtsu(y, 2)
     prop <- init$prop
