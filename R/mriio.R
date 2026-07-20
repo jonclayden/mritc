@@ -30,7 +30,7 @@ writeMRI <- function(data, file, header=NULL, format) {
              an object of class 'anlz'.")
     if(format == "rawb.gz"){
         f <- gzfile(file, open="wb")
-        writeBin(as.vector(ifelse(objClass=="array", data, data@.Data)), f, size=1)
+        writeBin(as.vector(if(objClass=="array") data else data@.Data), f, size=1)
         on.exit(close(f))
     }
     else if(format == "analyze"){
