@@ -16,7 +16,8 @@ mritc.pvhmrfem <- function(y, neighbors, blocks,
                         -1, 1, 2, 1, -1, -1, -1, 1, 2, 1, -1, -1, -1, 1, 2),
                         ncol=5), beta=0.6,
                       mu, sigma, err=1e-4, maxit=20, verbose){
-    #Error checking
+
+    checkErrors(mu=mu, sigma=sigma, err=err)
 
     if (length(err) < 2) err <- rep(err, length.out = 2)
 
