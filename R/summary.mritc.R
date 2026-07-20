@@ -1,7 +1,7 @@
 summary.mritc <- function(object, ...){
     n <- nrow(object$prob)
     k <- ncol(object$prob)
-    class <- max.col(object$prob)
+    class <- max.col(object$prob, ties.method="first")
     prop <- sapply(1:k, function(i) sum(class==i)/n)
     prop <- round(prop , 2) * 100
     prop[k] <- 100 - sum(prop[1:(k-1)])

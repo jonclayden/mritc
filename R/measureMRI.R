@@ -45,8 +45,8 @@ measureMRI <- function(intvec=NULL, actual, pre){
         stop("'intvec' has to be a vector.")
     if (!is.null(intvec) && length(intvec) != nrow(pre))
         stop("The number of intensity values does not match the dimension of the 'pre'.")
-    actual.discrete <- max.col(actual)
-    pre.discrete <- max.col(pre)
+    actual.discrete <- max.col(actual, ties.method="first")
+    pre.discrete <- max.col(pre, ties.method="first")
 
     #aclass <- unique(actual.discrete)
     #pclass <- unique(pre.discrete)
