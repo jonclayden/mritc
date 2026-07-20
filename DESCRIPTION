@@ -15,7 +15,7 @@ Description: Implements various methods for tissue classification in magnetic
 Depends: R (>= 2.14.0), lattice (>= 0.18-8), misc3d (>= 0.8-1),
         oro.nifti (>= 0.4.0)
 Imports: methods
-Suggests: tkrplot (>= 0.0-23)
+Suggests: tkrplot (>= 0.0-23), tinytest, covr
 License: GPL
 URL: https://github.com/jonclayden/mritc
 BugReports: https://github.com/jonclayden/mritc/issues
