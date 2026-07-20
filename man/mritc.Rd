@@ -29,7 +29,7 @@
    mritc.bayes(y, neighbors, blocks, sub, subvox,
                subbias, neighbors.bias, blocks.bias, weineighbors.bias, weights.bias,
                spatialMat, beta, mu, sigma, niter, verbose)
-   mritc(intarr, mask, method)
+   mritc(intarr, mask, method, verbose = TRUE)
 }
 \arguments{
   \item{y}{a vector of intensity values of voxels.}

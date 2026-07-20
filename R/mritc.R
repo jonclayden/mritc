@@ -1,5 +1,6 @@
 mritc <- function(intarr, mask, method=c("EM", "ICM", "HMRFEM", "MCMC",
-                                  "MCMCsub", "PVHMRFEM", "MCMCsubbias")){
+                                  "MCMCsub", "PVHMRFEM", "MCMCsubbias"),
+                   verbose=TRUE){
     if (length(dim(intarr)) != 3)
         stop("The intensity values of an MR image has to be in a 3D array.")
 
@@ -24,27 +25,27 @@ mritc <- function(intarr, mask, method=c("EM", "ICM", "HMRFEM", "MCMC",
     sigma <- init$sigma
   
     result <- switch(method,
-              EM = mritc.em(y, prop, mu, sigma, verbose=TRUE),
+              EM = mritc.em(y, prop, mu, sigma, verbose=verbose),
               ICM = mritc.icm(y, mrispatial$neighbors, mrispatial$blocks,
-                          mu=mu, sigma=sigma, verbose=TRUE),
+                          mu=mu, sigma=sigma, verbose=verbose),
               HMRFEM = mritc.hmrfem(y, mrispatial$neighbors, mrispatial$blocks,
-                             mu=mu, sigma=sigma, verbose=TRUE),
+                             mu=mu, sigma=sigma, verbose=verbose),
               MCMC = mritc.bayes.nobias(y, mrispatial$neighbors, mrispatial$blocks,
                          mrispatial$sub, mrispatial$subvox,
                          spatialMat=diag(1,3), beta=0.7, mu, sigma,
-                         niter=100, verbose=TRUE),
+                         niter=100, verbose=verbose),
               MCMCsub = mritc.bayes.nobias(y, mrispatial$neighbors, mrispatial$blocks,
                             mrispatial$sub, mrispatial$subvox,
                             spatialMat=matrix(c(2,0,-1,0,2,0,-1,0,2), nrow=3),
-                            beta=0.3, mu, sigma, niter=100, verbose=TRUE),
+                            beta=0.3, mu, sigma, niter=100, verbose=verbose),
               MCMCsubbias = mritc.bayes.bias(y, mrispatial$neighbors,
                                 mrispatial$blocks, mrispatial$subvox,
                                 mrispatial26$neighbors, mrispatial26$blocks,
-                                mrispatial26$weineighbors, mrispatial26$weights,  
+                                mrispatial26$weineighbors, mrispatial26$weights,
                                 spatialMat=matrix(c(2,0,-1,0,2,0,-1,0,2), nrow=3),
-                                beta=0.3, mu, sigma, niter=1000, verbose=TRUE),
+                                beta=0.3, mu, sigma, niter=1000, verbose=verbose),
               PVHMRFEM = mritc.pvhmrfem(y, mrispatial$neighbors, mrispatial$blocks,
-                                  mu=mu, sigma=sigma, verbose=TRUE))
+                                  mu=mu, sigma=sigma, verbose=verbose))
     
     
     class(result) <- "mritc"
