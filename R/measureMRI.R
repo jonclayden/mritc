@@ -66,10 +66,12 @@ measureMRI <- function(intvec=NULL, actual, pre){
     conTable <- getConTable(actual.discrete, pre.discrete)
 
     if(! is.null(intvec)){
+        if (!requireNamespace("lattice", quietly=TRUE))
+            stop("The \"lattice\" package is required to plot the intensity densities")
         intensity <- rep(intvec, 2)
         class <- c(actual.discrete, pre.discrete)
         g <- rep(c("actual", "predicted"), each=length(intensity)/2)
-        dp <- densityplot(~ intensity | factor(class), groups = g,
+        dp <- lattice::densityplot(~ intensity | factor(class), groups = g,
                     plot.points = FALSE, ref = TRUE,
                     auto.key = list(columns = 2),
                     layout=c(1,ncol(pre)))

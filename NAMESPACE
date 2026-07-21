@@ -8,11 +8,9 @@ S3method(print, mritc)
 S3method(summary, mritc)
 S3method(plot, mritc)
 
-importFrom("lattice", densityplot)
-importFrom("misc3d", slices3d)
 import(oro.nifti)
 
-importFrom("graphics", "plot")
+importFrom("graphics", "plot", "hist")
 importFrom("stats", "dnorm", "pnorm", "qnorm", "quantile", "rgamma",
            "rnorm", "runif", "sd")
 importFrom("methods", "as")
