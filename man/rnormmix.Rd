@@ -21,7 +21,7 @@
   mu <- c(-4, 0, 4)
   sigma <- rep(1, 3)
   y <- rnormmix(n=10000, prop, mu, sigma)
-  hist(y, breaks=50)
+  hist(y[,1], breaks=50)
 }
 \keyword{distribution}
 
