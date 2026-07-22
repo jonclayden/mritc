@@ -2,7 +2,7 @@
 
 
 
-[![CRAN version](https://www.r-pkg.org/badges/version/mritc)](https://cran.r-project.org/package=mritc) [![CI](https://github.com/jonclayden/mritc/actions/workflows/ci.yaml/badge.svg)](https://github.com/jonclayden/mritc/actions/workflows/ci.yaml) [![codecov](https://codecov.io/gh/jonclayden/mritc/graph/badge.svg?token=C0yDWRkldA)](https://codecov.io/gh/jonclayden/mritc) [![Dependencies](https://tinyverse.netlify.app/badge/mritc)](https://cran.r-project.org/package=mritc)
+[![CRAN version](https://www.r-pkg.org/badges/version/mritc)](https://cran.r-project.org/package=mritc) [![CI](https://github.com/jonclayden/mritc/actions/workflows/ci.yaml/badge.svg)](https://github.com/jonclayden/mritc/actions/workflows/ci.yaml) [![codecov](https://codecov.io/gh/jonclayden/mritc/graph/badge.svg?token=C0yDWRkldA)](https://app.codecov.io/gh/jonclayden/mritc) [![Dependencies](https://tinyverse.netlify.app/badge/mritc)](https://cran.r-project.org/package=mritc)
 
 # mritc: MRI Tissue Classification in R
 
