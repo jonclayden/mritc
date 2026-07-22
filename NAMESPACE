@@ -10,7 +10,7 @@ S3method(plot, mritc)
 
 import(oro.nifti)
 
-importFrom("graphics", "plot", "hist")
+importFrom("graphics", "plot")
 importFrom("stats", "dnorm", "pnorm", "qnorm", "quantile", "rgamma",
            "rnorm", "runif", "sd")
 importFrom("methods", "as")
