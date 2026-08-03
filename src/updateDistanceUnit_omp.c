@@ -51,8 +51,8 @@ SEXP updateDistanceUnit(SEXP sbias, SEXP sneighbors, SEXP snvertex, SEXP snneigh
 		double sumB1 = 0.0, sumB2 = 0.0;
 		for (j = 0; j < nneigh; j++) {
 			int jj = i + j * nvertex;
-			sumB1 = sumB1 + bias[neighbors[jj]]*weights[j]*neiDiscrete[jj];
-			sumB2 = sumB2 + bias[neighbors[jj]]*weightsnew[j]*neiDiscrete[jj];
+			sumB1 = sumB1 + bias[neighbors[jj]-1] * weights[j] * neiDiscrete[jj];
+			sumB2 = sumB2 + bias[neighbors[jj]-1] * weightsnew[j] * neiDiscrete[jj];
 		}
 		sumB1 = sumB1 + bias[i]*weineighbors[i];
 		I1[i] = sumB1;
