@@ -1,5 +1,9 @@
 // RegisteringDynamic Symbols
 
+// Avoid remapping "Rf_match" to "match" in Rinternals.h, as it collides with
+// the "match" clause keyword used in recent LLVM's omp.h
+#define R_NO_REMAP
+
 #include <R.h>
 #include <Rinternals.h>
 #include <R_ext/Rdynload.h>
