@@ -1,3 +1,8 @@
+# mritc 0.6.1
+
+* A buffer overflow and an OpenMP-related name clash detected by CRAN checks
+  have both been resolved.
+
 # mritc 0.6.0
 
 * Package dependencies have been simplified. The `lattice` and `misc3d`
