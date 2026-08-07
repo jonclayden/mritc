@@ -62,6 +62,8 @@ SEXP updateDistanceUnit(SEXP sbias, SEXP sneighbors, SEXP snvertex, SEXP snneigh
 
     SEXP qq;
 	PROTECT(qq = allocVector(REALSXP, 2));
+	REAL(qq)[0] = 0.0;
+	REAL(qq)[1] = 0.0;
 	for (i = 0; i < nvertex; i++) {
 		REAL(qq)[0] = 	REAL(qq)[0] + I1[i]*bias[i];
 		REAL(qq)[1] = 	REAL(qq)[1] + I2[i]*bias[i];
