@@ -1,7 +1,7 @@
 Package: mritc
 Title: MRI Tissue Classification
-Date: 2026-08-03
-Version: 0.6.1
+Date: 2026-08-19
+Version: 0.6.2
 Authors@R: c(person("Dai", "Feng", role="aut"),
              person("Luke", "Tierney", role="aut"),
              person("Jon", "Clayden", role=c("cre","aut"),

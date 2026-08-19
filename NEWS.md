@@ -1,3 +1,7 @@
+# mritc 0.6.2
+
+* An uninitialised memory bug picked up by `valgrind` has been corrected.
+
 # mritc 0.6.1
 
 * A buffer overflow and an OpenMP-related name clash detected by CRAN checks
